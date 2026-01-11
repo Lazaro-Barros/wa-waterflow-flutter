@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'theme/app_theme.dart';
 import 'screens/login_screen.dart';
-import 'screens/home_screen.dart';
+import 'screens/main_scaffold.dart';
 import 'services/auth_service.dart' show AuthService, TokenExpiredException;
 import 'models/auth_response_model.dart';
 
@@ -150,7 +150,7 @@ class _AuthWrapperState extends State<AuthWrapper> {
     }
 
     if (_isAuthenticated && _authResponse != null) {
-      return HomeScreen(user: _authResponse!.user);
+      return MainScaffold(user: _authResponse!.user);
     }
 
     return LoginScreen(onLoginSuccess: _handleLoginSuccess);
