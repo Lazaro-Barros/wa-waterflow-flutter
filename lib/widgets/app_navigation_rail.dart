@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 enum AppPage {
   dashboard,
   waterSources,
+  regions,
+  trucks,
+  drivers,
 }
 
 class AppNavigationRail extends StatelessWidget {
@@ -33,6 +36,21 @@ class AppNavigationRail extends StatelessWidget {
           icon: Icon(Icons.waves_outlined),
           selectedIcon: Icon(Icons.waves),
           label: Text('Mananciais'),
+        ),
+        NavigationRailDestination(
+          icon: Icon(Icons.map_outlined),
+          selectedIcon: Icon(Icons.map),
+          label: Text('Regiões'),
+        ),
+        NavigationRailDestination(
+          icon: Icon(Icons.local_shipping_outlined),
+          selectedIcon: Icon(Icons.local_shipping),
+          label: Text('Caminhões'),
+        ),
+        NavigationRailDestination(
+          icon: Icon(Icons.person_outline),
+          selectedIcon: Icon(Icons.person),
+          label: Text('Motoristas'),
         ),
       ],
     );

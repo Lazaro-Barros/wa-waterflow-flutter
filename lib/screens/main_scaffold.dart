@@ -3,6 +3,9 @@ import '../widgets/app_navigation_rail.dart';
 import '../models/user_model.dart';
 import 'home_screen.dart';
 import 'water_sources/water_sources_list_screen.dart';
+import 'regions/regions_list_screen.dart';
+import 'trucks/trucks_list_screen.dart';
+import 'drivers/drivers_list_screen.dart';
 
 class MainScaffold extends StatefulWidget {
   final UserModel user;
@@ -47,6 +50,12 @@ class _MainScaffoldState extends State<MainScaffold> {
         return HomeScreen(user: widget.user);
       case AppPage.waterSources:
         return const WaterSourcesListScreen();
+      case AppPage.regions:
+        return const RegionsListScreen();
+      case AppPage.trucks:
+        return const TrucksListScreen();
+      case AppPage.drivers:
+        return const DriversListScreen();
     }
   }
 }
